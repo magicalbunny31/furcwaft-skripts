@@ -1,0 +1,11 @@
+# contributors: magicalbunny31, ItsShadowDev 🦊
+# built off of https://github.com/ItsShadowDev/Skript/blob/main/tablist.sk 🔗
+
+every 20 ticks:
+   loop all players:
+      set {_upperHeader} to "&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,&a.&2,"
+      set loop-player's tab list header to "%{_upperHeader}%&r%nl%&b.: &lFriends' SMP&r&b :."
+
+      set loop-player's tab list name to loop-player's displayname
+
+      set loop-player's tab list footer to "&6TPS:&r &a%tps%"
