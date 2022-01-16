@@ -1,0 +1,37 @@
+# contributors: magicalbunny31 🦊
+
+
+command /smp:
+   executable by: players
+   trigger:
+      if player's world is "world":
+         message "&4TELEPORT FAILED: already in world!"
+         stop
+
+
+      set {_cooldown} to 60
+      set {_pitch} to 1
+      set {_playerLocation} to player's location
+
+
+      while {_cooldown} is not 0:
+         if {_cooldown} is 60 or 40 or 20:
+            message "&6TELEPORTING IN:&r &a%{_cooldown}/20%"
+            play sound "block.note_block.pling" with pitch {_pitch} to the player
+            add .5 to {_pitch}
+
+         remove 1 from {_cooldown}
+
+
+         if distance between {_playerLocation} and player is not 0:
+            message "&4TELEPORT CANCELLED"
+            play sound "entity.villager.no" to the player
+            stop
+
+         set {_playerLocation} to player's location
+         wait a tick
+
+   
+      teleport player to {_playerLocation}
+      play sound "entity.fox.teleport" to the player
+      message "&6&lWORLD:&r &a&lsmp"
