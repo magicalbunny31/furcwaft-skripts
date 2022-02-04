@@ -1,0 +1,11 @@
+# contributors: magicalbunny31 🦊
+
+
+on join:
+   # discord join messages
+   # https://gist.github.com/macdja38/12dff2a6a496cd2d9185fec43c01d77b
+
+   add "&f%player%&r &7just joined the server - glhf!&r", "&f%player%&r &7just joined. everyone, look busy!&r", "&f%player%&r &7just joined. can i get a heal?&r", "&f%player%&r &7joined your party.&r", "&f%player%&r &7joined. you must contruct additional pylons.&r", "&7ermagherd.&r &f%player%&r &7is here.&r", "&7welcome,&r &f%player%&r&7. stay awhile and listen.&r", "&7welcome,&r &f%player%&r&7. we were expecting you ( ͡° ͜ʖ ͡°)&r", "&7welcome,&r &f%player%&r&7. we hope you brought pizza.&r", "&7welcome,&r &f%player%&r&7. leave your weapons by the door.&r", "&7a wild&r &f%player%&r &7just appeared.&r", "&7swoooosh.&r &f%player%&r &7just landed.&r", "&7brace yourselves.&r &f%player%&r &7just joined the server.&r", "&f%player%&r &7just joined. hide your bananas.&r", "&f%player%&r &7just arrived. seems op - please nerf.&r", "&f%player%&r &7just slid into the server.&r", "&7a&r &f%player%&r &7has spawned in the server.&r", "&7big&r &f%player%&r &7showed up!&r", "&7where's&r &f%player%&r&7? in the server!&r", "&f%player%&r &7hopped into the server. kangaroo!!&r", "&f%player%&r &7just showed up. hold my beer.&r" to {_join_messages::*}
+   set {_join_message} to random element out of {_join_messages::*}
+
+   set join message to "&7[&r&6server&r&7]&r %{_join_message}%"

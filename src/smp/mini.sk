@@ -1,0 +1,64 @@
+# contributors: magicalbunny31 🦊
+
+
+command /mini:
+   executable by: players
+   trigger:
+      set {_cooldown} to 60
+      set {_pitch} to 1
+      set {_playerLocation} to player's location
+
+
+      if player's world is "mini":
+         add "you're already in this world chef", "this is the same world!", "you can't teleport to the same world you're in >.>", "you're in this world!" to {_already_in_world_messages::*}
+         set {_already_in_world_message} to random element out of {_already_in_world_messages::*}
+         
+         message "&7[&r&6server&r&7]&r &4%{_already_in_world_message}%"
+         play sound "entity.villager.no" to the player
+         stop
+
+
+      while {_cooldown} is not 0:
+         if {_cooldown} is 50:
+            make 250 of portal at player's location
+            make 250 of portal at player's location with offset vector(0, 1, 0)
+
+
+         if {_cooldown} is 60 or 40 or 20:
+            send title "&7===&r &6%{_cooldown}/20%&r &7===&r" with subtitle "&2&omove to cancel teleportation!&r" for 1 second
+            play sound "block.note_block.pling" with pitch {_pitch} to player
+            add 0.5 to {_pitch}
+
+         remove 1 from {_cooldown}
+
+
+         if distance between {_playerLocation} and player is not 0:
+            add "teleport cancelled!", "you moved, so the teleport cancelled", "alright, you won't be teleported there now", "countdown stopped!", "..didn't want to go?" to {_teleport_cancelled_messages::*}
+            set {_teleport_cancelled_message} to random element of {_teleport_cancelled_messages::*}
+
+            message "&7[&r&6server&r&7]&r &4%{_teleport_cancelled_message}%"
+            play sound "entity.villager.no" to the player
+            stop
+
+         set {_playerLocation} to player's location
+         wait a tick
+
+
+      if player's world is "world":
+         set {smp.%player's uuid%} to player's location
+
+      if player's world is "skyblock":
+         set {skyblock.%player's uuid%} to player's location
+
+      if player's world is "mini":
+         set {mini.%player's uuid%} to player's location
+
+
+      make 25 of poof at player's location
+
+      teleport player to {mini.%player's uuid%} if {mini.%player's uuid%} is set else world "mini"'s spawn
+      make 25 of poof at player's location
+      play sound "entity.fox.teleport" to player
+
+      reset player's title
+      send title "&7===&r &6mini&r &7===&r" for 1 second with fade out 3 seconds
