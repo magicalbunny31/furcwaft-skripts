@@ -2,4 +2,4 @@
 
 
 on quit:
-   set leave message to "&7[&r&6server&r&7]&r &f&l%{player}%&r &7left the server&r"
+   set leave message to "&7[&r&6server&r&7]&r &f%player%&r &7left the server.&r"
