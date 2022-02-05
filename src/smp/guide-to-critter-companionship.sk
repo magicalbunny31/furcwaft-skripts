@@ -1,0 +1,58 @@
+# contributors: ItsShadowDev, magicalbunny31 🦊
+# https://terraria.fandom.com/wiki/Guide_To_Critter_Companionship
+
+
+options:
+   guide-to-critter-companionship: book named "&eGuide to Critter Companionship" with lore "&fPrevents you from hurting critters while in the inventory" and "&7Contributers: ItsShadowDev, magicalbunny31"
+
+
+on damage:
+   if victim is a rabbit or a bee:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+   if victim is a chicken or a cow:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+   if victim is a cat or a horse:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+   if victim is a turtle or a donkey:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+   if victim is a mule or a fox:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+   if victim is a sheep or a pig:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+   if victim is a parrot or a ocelot:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+   if victim is a squid or a villager:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+   if victim is a cod or a salmon:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+   if victim is a tropical fish or a pufferfish:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+   if victim is a strider or a snow golem:
+      loop all items in the inventory of attacker:
+         if loop-value is {@guide-to-critter-companionship}:
+            cancel event
+
+
+on load:
+   set {_s} to {@guide-to-critter-companionship}
+   register new shapeless recipe for {_s} using book, gold nugget with id "guide_to_critter_companionship"
