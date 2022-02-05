@@ -1,0 +1,11 @@
+# contributors: magicalbunny31 🦊
+
+
+command /check-ender-chest <player>:
+   permission: op
+   permission message: &cI'm sorry, but you do not have permission to perform this command. Please inform the server administrators if you believe this is a error.
+   trigger:
+      if arg-1 is not set:
+         send "&cwhat user do we look at plox"
+      else:
+         open the arg-1's ender chest to player
