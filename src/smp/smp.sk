@@ -9,7 +9,7 @@ command /smp:
       set {_playerLocation} to player's location
 
 
-      if player's world is "world":
+      if player's world is "world" or "world_nether" or "world_the_end":
          add "you're already in this world chef", "this is the same world!", "you can't teleport to the same world you're in >.>", "you're in this world!" to {_already_in_world_messages::*}
          set {_already_in_world_message} to random element out of {_already_in_world_messages::*}
          
