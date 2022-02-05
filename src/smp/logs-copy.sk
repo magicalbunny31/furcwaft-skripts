@@ -1,0 +1,26 @@
+# contributors: magicalbunny31 🦊
+# note: this is a sensitive skript! some details have been stripped 📃
+
+
+on Skript start:
+   send a "post" request to "redacted" with headers "Content-Type: application/json" and body "redacted"
+
+
+on Skript stop:
+   send a "post" request to "redacted" with headers "Content-Type: application/json" and body "redacted"
+
+
+on join:
+   send a "post" request to "redacted" with headers "Content-Type: application/json" and body "redacted"
+
+
+on quit:
+   send a "post" request to "redacted" with headers "Content-Type: application/json" and body "redacted"
+
+
+on chat:
+   send a "post" request to "redacted" with headers "Content-Type: application/json" and body "redacted"
+
+
+on death of player:
+   send a "post" request to "redacted" with headers "Content-Type: application/json" and body "redacted"
