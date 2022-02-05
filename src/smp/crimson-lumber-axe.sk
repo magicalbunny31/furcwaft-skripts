@@ -2,7 +2,7 @@
 
 
 options:
-   crimson-lumber-axe: wooden axe of protection 1 named "&eCrimson Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole crimson fungus!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+   crimson-lumber-axe: wooden axe of protection 1 named "&eCrimson Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole crimson fungus!" and "&7Contributors: ItsShadowDev, magicalbunny31"
 
 
 function chain_crimson(b: block, n: number, p: player):

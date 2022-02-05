@@ -2,7 +2,7 @@
 
 
 options:
-   oak-lumber-axe: wooden axe of protection 1 named "&eOak Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole oak tree!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+   oak-lumber-axe: wooden axe of protection 1 named "&eOak Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole oak tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
 
 
 function chain_oak(b: block, n: number, p: player):
