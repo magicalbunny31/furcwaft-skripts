@@ -1,0 +1,31 @@
+# contributors: ItsShadowDev, magicalbunny31 🦊
+
+
+options:
+   birch-lumber-axe: wooden axe of protection 1 named "&eBirch Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole birch tree!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+
+
+function chain_birch(b: block, n: number, p: player):
+   wait 1 tick
+
+   if {_n} is greater than 64: # will only break up to a stack of logs
+      stop
+
+   add 1 to {_n} # add to the block counter
+
+   loop blocks in radius 3 around {_b}: # check for logs around the current log
+      if loop-block is birch log: # break birch logs
+
+         if block below loop-block is air or birch leaves or birch log:
+            set block below loop-block to air
+
+            chain_birch(loop-block, {_n}, {_p})
+            break loop-block naturally
+            
+            play sound "block.wood.break" with volume 1 at location of loop-block for all players
+            wait 10 ticks
+
+
+on load:
+   set {_s} to {@birch-lumber-axe}
+   register new shaped recipe for {_s} using air, birch wood, birch wood, air, diamond block, birch wood, air, diamond block and air with id "birch_lumber_axe"

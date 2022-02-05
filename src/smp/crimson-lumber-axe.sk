@@ -1,0 +1,31 @@
+# contributors: ItsShadowDev, magicalbunny31 🦊
+
+
+options:
+   crimson-lumber-axe: wooden axe of protection 1 named "&eCrimson Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole crimson fungus!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+
+
+function chain_crimson(b: block, n: number, p: player):
+   wait 1 tick
+
+   if {_n} is greater than 64: # will only break up to a stack of stems
+      stop
+
+   add 1 to {_n} # add to the block counter
+
+   loop blocks in radius 3 around {_b}: # check for stems around the current stem
+      if loop-block is crimson stem: # break crimson stems
+
+         if block below loop-block is air or nether wart block or crimson stem:
+            set block below loop-block to air
+            
+            chain_crimson(loop-block, {_n}, {_p})
+            break loop-block naturally
+            
+            play sound "block.stem.break" with volume 1 at location of loop-block for all players
+            wait 10 ticks
+
+
+on load:
+   set {_s} to {@crimson-lumber-axe}
+   register new shaped recipe for {_s} using air, crimson hyphae, crimson hyphae, air, diamond block, crimson hyphae, air, diamond block and air with id "crimson_lumber_axe"

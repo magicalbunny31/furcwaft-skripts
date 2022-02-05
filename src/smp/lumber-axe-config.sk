@@ -1,0 +1,108 @@
+# contributors: magicalbunny31 🦊
+
+
+options:
+   oak-lumber-axe: wooden axe of protection 1 named "&eOak Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole oak tree!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+   spruce-lumber-axe: wooden axe of protection 1 named "&eSpruce Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole spruce tree!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+   birch-lumber-axe: wooden axe of protection 1 named "&eBirch Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole birch tree!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+   jungle-lumber-axe: wooden axe of protection 1 named "&eJungle Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole jungle tree!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+   acacia-lumber-axe: wooden axe of protection 1 named "&eAcacia Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole acacia tree!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+   dark-oak-lumber-axe: wooden axe of protection 1 named "&eDark Oak Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole dark oak tree!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+   crimson-lumber-axe: wooden axe of protection 1 named "&eCrimson Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole crimson fungus!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+   warped-lumber-axe: wooden axe of protection 1 named "&eWarped Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole warped fungus!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+
+
+on break:
+   if gamemode of player is not survival: # lumber axe only works in creative
+      stop
+
+   if event-block is not any log or crimson stem or warped stem: # a lumber axe will break any log/stem
+      stop
+
+
+   if player's tool is {@oak-lumber-axe}: # oak lumber axe
+      set {_tree} to false
+
+      loop blocks above event-block:
+         if loop-block is oak leaves:
+            set {_tree} to true
+
+      if {_tree} is true:
+         chain_oak(event-block, 0, player)
+
+
+   if player's tool is {@spruce-lumber-axe}: # spruce lumber axe
+      set {_tree} to false
+
+      loop blocks above event-block:
+         if loop-block is any leaves:
+            set {_tree} to true
+
+      if {_tree} is true:
+         chain_spruce(event-block, 0, player)
+
+
+   if player's tool is {@birch-lumber-axe}: # birch lumber axe
+      set {_tree} to false
+
+      loop blocks above event-block:
+         if loop-block is any leaves:
+            set {_tree} to true
+
+      if {_tree} is true:
+         chain_birch(event-block, 0, player)
+
+
+   if player's tool is {@jungle-lumber-axe}: # jungle lumber axe
+      set {_tree} to false
+
+      loop blocks above event-block:
+         if loop-block is any leaves:
+            set {_tree} to true
+
+      if {_tree} is true:
+         chain_jungle(event-block, 0, player)
+
+         
+   if player's tool is {@acacia-lumber-axe}: # acacia lumber axe
+      set {_tree} to false
+
+      loop blocks above event-block:
+         if loop-block is any leaves:
+            set {_tree} to true
+
+      if {_tree} is true:
+         chain_acacia(event-block, 0, player)
+
+
+   if player's tool is {@dark-oak-lumber-axe}: # dark oak lumber axe
+      set {_tree} to false
+
+      loop blocks above event-block:
+         if loop-block is any leaves:
+            set {_tree} to true
+
+      if {_tree} is true:
+         chain_dark_oak(event-block, 0, player)
+
+
+   if player's tool is {@crimson-lumber-axe}: # dark oak lumber axe
+      set {_tree} to false
+
+      loop blocks above event-block:
+         if loop-block is nether wart block:
+            set {_tree} to true
+
+      if {_tree} is true:
+         chain_crimson(event-block, 0, player)
+
+
+   if player's tool is {@warped-lumber-axe}: # warped lumber axe
+      set {_tree} to false
+
+      loop blocks above event-block:
+         if loop-block is warped wart block:
+            set {_tree} to true
+
+      if {_tree} is true:
+         chain_warped(event-block, 0, player)

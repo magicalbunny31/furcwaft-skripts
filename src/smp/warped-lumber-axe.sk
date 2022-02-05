@@ -1,0 +1,29 @@
+# contributors: ItsShadowDev, magicalbunny31 🦊
+
+
+options:
+   warped-lumber-axe: wooden axe of protection 1 named "&eWarped Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole warped fungus!" and "&8Contributors: ItsShadowDev, magicalbunny31"
+
+
+function chain_warped(b: block, n: number, p: player):
+   if {_n} is greater than 64: # will only break up to a stack of stems
+      stop
+
+   add 1 to {_n} # add to the block counter
+
+   loop blocks in radius 3 around {_b}: # check for stems around the current stem
+      if loop-block is warped stem: # break warped stems
+
+         if block below loop-block is air or warped wart block or warped stem:
+            set block below loop-block to air
+            
+            chain_warped(loop-block, {_n}, {_p})
+            break loop-block naturally
+            
+            play sound "block.stem.break" with volume 1 at location of loop-block for all players
+            wait 10 ticks
+
+
+on load:
+   set {_s} to {@warped-lumber-axe}
+   register new shaped recipe for {_s} using air, warped hyphae, warped hyphae, air, diamond block, warped hyphae, air, diamond block and air with id "warped_lumber_axe"
