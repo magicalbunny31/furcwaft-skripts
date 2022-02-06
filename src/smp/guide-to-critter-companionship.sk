@@ -3,7 +3,7 @@
 
 
 options:
-   guide-to-critter-companionship: book named "&eGuide to Critter Companionship" with lore "&fPrevents you from hurting critters while in the inventory" and "&7Contributers: ItsShadowDev, magicalbunny31"
+   guide-to-critter-companionship: book named "&eGuide To Critter Companionship" with lore "&fPrevents you from hurting critters while in the inventory" and "&7Contributers: ItsShadowDev, magicalbunny31"
 
 
 on damage:
