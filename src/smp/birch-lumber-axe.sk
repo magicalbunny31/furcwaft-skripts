@@ -28,4 +28,4 @@ function chain_birch(b: block, n: number, p: player):
 
 on load:
    set {_s} to {@birch-lumber-axe}
-   register new shaped recipe for {_s} using birch wood, birch wood, diamond block, birch wood, diamond block, stick, diamond block, stick and birch sapling with id "birch_lumber_axe"
+   register new shaped recipe for {_s} using birch wood, birch wood, diamond, birch wood, stick, birch sapling, diamond, birch sapling, birch sapling with id "birch_lumber_axe"

@@ -26,4 +26,4 @@ function chain_warped(b: block, n: number, p: player):
 
 on load:
    set {_s} to {@warped-lumber-axe}
-   register new shaped recipe for {_s} using warped hyphae, warped hyphae, diamond block, warped hyphae, diamond block, stick, diamond block, stick and warped fungus with id "warped_lumber_axe"
+   register new shaped recipe for {_s} using warped hyphae, warped hyphae, diamond, warped hyphae, stick, warped fungus, diamond, warped fungus, warped fungus with id "warped_lumber_axe"

@@ -28,4 +28,4 @@ function chain_crimson(b: block, n: number, p: player):
 
 on load:
    set {_s} to {@crimson-lumber-axe}
-   register new shaped recipe for {_s} using crimson hyphae, crimson hyphae, diamond block, crimson hyphae, diamond block, stick, diamond block, stick, crimson fungus with id "crimson_lumber_axe"
+   register new shaped recipe for {_s} using crimson hyphae, crimson hyphae, diamond, crimson hyphae, stick, crimson fungus, diamond, crimson fungus, crimson fungus with id "crimson_lumber_axe"

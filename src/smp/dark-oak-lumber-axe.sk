@@ -28,4 +28,4 @@ function chain_dark_oak(b: block, n: number, p: player):
 
 on load:
    set {_s} to {@dark-oak-lumber-axe}
-   register new shaped recipe for {_s} using dark oak wood, dark oak wood, diamond block, dark oak wood, diamond block, stick, diamond block, stick and dark oak sapling with id "dark_oak_lumber_axe"
+   register new shaped recipe for {_s} using dark oak wood, dark oak wood, diamond, dark oak wood, stick, dark oak sapling, diamond, dark oak sapling, dark oak sapling with id "dark_oak_lumber_axe"
