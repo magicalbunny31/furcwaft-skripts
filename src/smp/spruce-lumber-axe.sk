@@ -2,13 +2,13 @@
 
 
 options:
-   spruce-lumber-axe: wooden axe of protection 1 named "&eSpruce Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole spruce tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   spruce-lumber-axe: wooden axe named "&eSpruce Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole spruce tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
 
 
 function chain_spruce(b: block, n: number, p: player):
    wait 1 tick
 
-   if {_n} is greater than 64: # will only break up to a stack of logs
+   if {_n} is greater than 192: # will only break up to three stacks of logs
       stop
 
    add 1 to {_n} # add to the block counter
@@ -28,4 +28,4 @@ function chain_spruce(b: block, n: number, p: player):
 
 on load:
    set {_s} to {@spruce-lumber-axe}
-   register new shaped recipe for {_s} using air, spruce wood, spruce wood, air, diamond block, spruce wood, air, diamond block and air with id "spruce_lumber_axe"
+   register new shaped recipe for {_s} using spruce wood, spruce wood, diamond block, spruce wood, diamond block, stick, diamond block, stick and spruce sapling with id "spruce_lumber_axe"

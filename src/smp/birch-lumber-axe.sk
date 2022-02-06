@@ -2,7 +2,7 @@
 
 
 options:
-   birch-lumber-axe: wooden axe of protection 1 named "&eBirch Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole birch tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   birch-lumber-axe: wooden axe named "&eBirch Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole birch tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
 
 
 function chain_birch(b: block, n: number, p: player):
@@ -28,4 +28,4 @@ function chain_birch(b: block, n: number, p: player):
 
 on load:
    set {_s} to {@birch-lumber-axe}
-   register new shaped recipe for {_s} using air, birch wood, birch wood, air, diamond block, birch wood, air, diamond block and air with id "birch_lumber_axe"
+   register new shaped recipe for {_s} using birch wood, birch wood, diamond block, birch wood, diamond block, stick, diamond block, stick and birch sapling with id "birch_lumber_axe"

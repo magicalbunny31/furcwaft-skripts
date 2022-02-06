@@ -2,7 +2,7 @@
 
 
 options:
-   warped-lumber-axe: wooden axe of protection 1 named "&eWarped Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole warped fungus!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   warped-lumber-axe: wooden axe named "&eWarped Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole warped fungus!" and "&7Contributors: ItsShadowDev, magicalbunny31"
 
 
 function chain_warped(b: block, n: number, p: player):
@@ -26,4 +26,4 @@ function chain_warped(b: block, n: number, p: player):
 
 on load:
    set {_s} to {@warped-lumber-axe}
-   register new shaped recipe for {_s} using air, warped hyphae, warped hyphae, air, diamond block, warped hyphae, air, diamond block and air with id "warped_lumber_axe"
+   register new shaped recipe for {_s} using warped hyphae, warped hyphae, diamond block, warped hyphae, diamond block, stick, warped hyphae, stick and warped fungus with id "warped_lumber_axe"

@@ -2,7 +2,7 @@
 
 
 options:
-   crimson-lumber-axe: wooden axe of protection 1 named "&eCrimson Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole crimson fungus!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   crimson-lumber-axe: wooden axe named "&eCrimson Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole crimson fungus!" and "&7Contributors: ItsShadowDev, magicalbunny31"
 
 
 function chain_crimson(b: block, n: number, p: player):
@@ -28,4 +28,4 @@ function chain_crimson(b: block, n: number, p: player):
 
 on load:
    set {_s} to {@crimson-lumber-axe}
-   register new shaped recipe for {_s} using air, crimson hyphae, crimson hyphae, air, diamond block, crimson hyphae, air, diamond block and air with id "crimson_lumber_axe"
+   register new shaped recipe for {_s} using crimson hyphae, crimson hyphae, diamond block, crimson hyphae, diamond block, stick, crimson hyphae, stick and crimson fungus with id "crimson_lumber_axe"
