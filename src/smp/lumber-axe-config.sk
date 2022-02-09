@@ -2,18 +2,18 @@
 
 
 options:
-   oak-lumber-axe: wooden axe of protection 1 named "&eOak Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole oak tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
-   spruce-lumber-axe: wooden axe of protection 1 named "&eSpruce Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole spruce tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
-   birch-lumber-axe: wooden axe of protection 1 named "&eBirch Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole birch tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
-   jungle-lumber-axe: wooden axe of protection 1 named "&eJungle Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole jungle tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
-   acacia-lumber-axe: wooden axe of protection 1 named "&eAcacia Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole acacia tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
-   dark-oak-lumber-axe: wooden axe of protection 1 named "&eDark Oak Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole dark oak tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
-   crimson-lumber-axe: wooden axe of protection 1 named "&eCrimson Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole crimson fungus!" and "&7Contributors: ItsShadowDev, magicalbunny31"
-   warped-lumber-axe: wooden axe of protection 1 named "&eWarped Lumber Axe" with nbt "{RepairCost:1000000,HideFlags:true}" with lore "&fCut down a whole warped fungus!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   oak-lumber-axe: wooden axe named "&eOak Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole oak tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   spruce-lumber-axe: wooden axe named "&eSpruce Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole spruce tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   birch-lumber-axe: wooden axe named "&eBirch Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole birch tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   jungle-lumber-axe: wooden axe named "&eJungle Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole jungle tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   acacia-lumber-axe: wooden axe named "&eAcacia Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole acacia tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   dark-oak-lumber-axe: wooden axe named "&eDark Oak Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole dark oak tree!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   crimson-lumber-axe: wooden axe named "&eCrimson Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole crimson fungus!" and "&7Contributors: ItsShadowDev, magicalbunny31"
+   warped-lumber-axe: wooden axe named "&eWarped Lumber Axe" with nbt "{RepairCost:1000000}" with lore "&fCut down a whole warped fungus!" and "&7Contributors: ItsShadowDev, magicalbunny31"
 
 
 on break:
-   if gamemode of player is not survival: # lumber axe only works in creative
+   if gamemode of player is not survival: # lumber axe only works in survival
       stop
 
    if event-block is not any log or crimson stem or warped stem: # a lumber axe will break any log/stem
