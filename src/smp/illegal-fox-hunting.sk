@@ -1,0 +1,15 @@
+# contributors: magicalbunny31 🦊
+
+
+on damage:
+   attacker is player
+   victim is fox
+
+   if (victim's health - damage) < 0.1:
+      cancel event
+      heal victim
+      make 250 of totem_of_undying at victim's location
+      play sound "item.totem.use" at victim's location
+
+      ban attacker because "&byou were been banned for killing foxes" for 5 minutes
+      kick attacker because "&byou have been banned for killing foxes%newline%&4[you'll be unbanned in five minutes]"
